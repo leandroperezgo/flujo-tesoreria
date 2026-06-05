@@ -48,7 +48,7 @@ def buscar_flujos_del_dia(client):
                         
                         # Preguntar a Claude qué flujo es
                         check = anthropic_client.messages.create(
-                            model="claude-sonnet-4-20250514",
+                            model="claude-sonnet-4-6",
                             max_tokens=50,
                             messages=[{
                                 "role": "user",
@@ -120,7 +120,7 @@ EGRESOS_TOTAL: $[monto]
 INGRESOS_TOTAL: $[monto]"""
 
     respuesta = anthropic_client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=500,
         messages=[{
             "role": "user",
